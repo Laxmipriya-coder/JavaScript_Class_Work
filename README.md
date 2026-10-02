@@ -1,25 +1,50 @@
-Library vs Framework
-Library
+# JavaScript Practice
 
-React is a open source javascript library
-updated version of javascript
-react is used to create easier and faster webpages
-in 2013 facebook company one man introduce
-react dom
-axios
-fetch
-redux
-redux tool kit
+## About
 
-Need  of React
-----------------------
-1.DOM
-i.Dynamically html creation and adding styles
-2.Library vs Framework
-3.SPA(Single Page Application) or MPA(multi Page Application)
-4.Functions(function declaration,Arrow Function) with return 
-5.Array(map,filter)
-6.Objects
-7.Destucturing
-8.Spread Operator 
-9.ES Modules
+This repository contains my JavaScript learning journey and daily practice tasks completed during my training at QSpiders.
+
+I created this repository to practice JavaScript concepts, improve my programming logic, and strengthen my problem-solving skills.
+
+## Topics Covered
+
+* Variables and Data Types
+* Operators and Conditional Statements
+* Loops
+* Functions
+* Arrays and Array Methods
+* Objects
+* ES6 Features
+* Destructuring, Rest and Spread Operators
+* DOM Manipulation
+* Events and Event Propagation
+* Local Storage
+* ES Modules
+* Promises
+* Fetch API
+* Exception Handling
+
+## Practice Tasks
+
+* Basic JavaScript programs
+* Array manipulation exercises
+* Number-based problems
+* DOM and event-handling tasks
+* Mini E-commerce application
+* Asynchronous JavaScript practice
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+* Visual Studio Code
+* Git and GitHub
+
+## Purpose
+
+The purpose of this repository is to maintain my practice programs, track my learning progress, and build a strong foundation in JavaScript development.
+
+## Author
+
+**Laxmipriya Mishra**
