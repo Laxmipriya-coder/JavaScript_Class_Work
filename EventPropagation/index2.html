@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Delegation</h1>
+    <ul id="parent">
+        <li id="list-1">Laxmi</li>
+        <li id="list-1">Tanaya</li>
+        <li id="list-1">Swap</li>
+        <li id="list-1">Uma</li>
+        <li id="list-1">Subu</li>
+        <li id="list-1">Sindhu</li>
+    </ul>
+    <script>
+        document.getElementById("parent").addEventListener("click",function(e){
+            console.log("Click Happened......");
+            console.log(e.target);
+            console.log(e.target.textContent);
+            console.log(e.target.id);
+            console.log(e.currentTarget);
+        })
+    </script>
+</body>
+</html>

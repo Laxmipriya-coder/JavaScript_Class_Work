@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Add</button>
+    <script>
+        let btn1 = document.getElementById('btn');
+        console.log(btn1);
+        btn1.addEventListener("click",function(){
+            let h1Tag = document.createElement("h1");
+            h1Tag.textContent = "Hello World";
+              document.body.append(h1Tag);
+        });
+      
+    </script>
+</body>
+</html>

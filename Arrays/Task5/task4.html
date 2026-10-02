@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" id="usn">
+    <button id="add">Join Queue</button>
+    <button id="remove">Release One</button>
+    <h1 id="message"></h1>
+    <h2 id="mess"></h2>
+
+    <script>
+        let arr = [];
+        let usnInp = document.getElementById("usn");
+        let btn = document.getElementById("add");
+        let removebtn = document.getElementById("remove");
+        let h1Tag = document.getElementById("message");
+        let h2Tag = document.getElementById("mess");
+
+        btn.addEventListener("click", () => {
+            let usnVal = Number(usnInp.value);
+            arr.push(usnVal);
+            usnInp.value = ""; 
+            console.log(arr);
+            h1Tag.textContent = `[${arr}]`;
+        });
+
+        removebtn.addEventListener("click",()=>{
+            arr.shift();
+            console.log(arr);
+            h2Tag.textContent = `[${arr}]`;
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

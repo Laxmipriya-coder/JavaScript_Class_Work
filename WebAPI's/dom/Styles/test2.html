@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "btn">Check</button>
+    <br><br>
+    <div id="box">
+        <h1></h1>
+    </div>
+
+    <script>
+        let butt = document.getElementById("btn");
+        let divTag = document.getElementById("box");
+
+        butt.addEventListener("click",function(){
+            let num = Number(prompt("Enter a number"));
+            if(num%2 == 0){
+                divTag.textContent=num + " is Even";
+                divTag.style.backgroundColor='black';
+                divTag.style.color="chartreuse";
+                divTag.style.width="300px";
+                divTag.style.height="200px";
+                divTag.style.display="flex";
+                divTag.style.justifyContent="center";
+                divTag.style.alignItems="center";
+                divTag.style.borderRadius="5px";
+
+            }
+            else{
+                divTag.textContent = num + " is Odd";
+                divTag.style.backgroundColor="blue";
+                divTag.style.color="white";
+                divTag.style.width="300px";
+                divTag.style.height="200px";
+                divTag.style.display="flex";
+                divTag.style.justifyContent="center";
+                divTag.style.alignItems="center";
+                divTag.style.borderRadius="5px";
+
+            }
+        })
+    </script>
+</body>
+</html>

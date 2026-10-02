@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function praticeAPI() {
+            let p1 = fetch("https://jsonplaceholder.typicode.com/users")
+            console.log(p1);
+
+            let p2 = p1.then((response) => {
+                return response.json();
+                //response is an object but this is not the actual json 
+            })
+            p2.then((data) => {
+                console.log(data);
+                // Because there are two asynchronous steps:
+                // fetch(url) gives Promise=> response then response.json
+            })
+        }
+        praticeAPI();
+    </script>
+</body>
+
+</html>

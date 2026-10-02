@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color:rgb(208, 18, 135);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #btn:hover{
+            background-color:rgb(196, 25, 179);
+        }
+    </style>
+</head>
+<body>
+    <button id = "btn">Add Element</button>
+    <div id="box"></div>
+    <script>
+        let btn = document.getElementById("btn");
+
+        let box = document.getElementById("box");
+        let count = 0;
+
+
+        btn.addEventListener("click",function(){
+            let pTag = document.createElement("p");
+            count++;
+            pTag.textContent= "Hii " + count;
+            box.append(pTag);
+           
+
+            let butt = document.createElement("button");
+            butt.textContent = "Delete";
+            pTag.appendChild(butt);
+
+            butt.addEventListener("click",function(){
+                pTag.remove();
+            })
+        })
+
+        // let x= 5;
+        // if(x=10){
+        //     console.log("yes");
+        // }
+        // else{
+        //     console.log("No");
+        // }
+    </script>
+</body>
+</html>

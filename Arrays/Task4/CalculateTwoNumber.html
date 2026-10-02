@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card shadow p-4">
+                    <h2 class="text-center mb-4">Addition</h2>
+                    <form action="" id="form-ele">
+                        <input type="number" id="inp1" class="form-control mb-3" placeholder="Enter first number">
+                        <input type="number" id="inp2" class="form-control mb-3" placeholder="Enter second number">
+                        <input type="submit" value="Calculate" id="btn" class="btn btn-outline-warning w-100">
+                        <h1 id="h1" class="text-center mt-4"></h1>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script>
+
+        let inpTag1 = document.getElementById("inp1");
+        let inpTag2 = document.getElementById("inp2");
+        let butt = document.getElementById("btn");
+        let formEle = document.getElementById("form-ele");
+        formEle.addEventListener("submit", function (e) {
+            e.preventDefault();
+            let inpVal1 = inpTag1.value;
+            let inpVal2 = inpTag2.value;
+            let h1Tag = document.getElementById("h1");
+            let sum = Number(inpVal1) + Number(inpVal2);
+            console.log(sum);
+            h1Tag.innerText = "Sum of Two Numbers is " + sum;
+            inpTag1.value = "";
+            inpTag2.value = "";
+        });
+    </script>
+</body>
+
+</html>

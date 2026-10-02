@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [12,7,8,15,20,33,40];
+        let count = 0;
+        let count1 =0;
+        // for(let i=0; i<numbers.length; i++){
+        //     if(i%2 == 0){
+        //         count++;
+        //     }
+        //     else{
+        //         count1++;
+        //     }
+        // }
+        // console.log(count);
+        // console.log(count1);
+
+        // for(let i of numbers){
+        //     if(i%2==0){
+        //         count++;
+        //     }
+        //     else{
+        //         count1++;
+        //     }
+        // }
+        // console.log(count);
+        // console.log(count1);
+
+        for(let i in numbers){
+            if(i%2 ==0){
+                count++;
+            }
+            else{
+                count1++;
+            }
+        }
+        console.log(count);
+        console.log(count1);
+
+
+
+    </script>
+</body>
+</html>

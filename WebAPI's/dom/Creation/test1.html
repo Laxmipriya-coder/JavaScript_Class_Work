@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="bg-info p-3 fs-3">
+        Counter App
+    </nav>
+    <section class="p-4" style="width: 300px; align-items:center">
+        <div class="border border-warning p-3 text-center">
+            <h3>Count Value</h3>
+            <h2 id="count">value</h2>
+            <button class="btn btn-outline-success" onclick="deccount()">Decrement</button>
+            <button class="btn btn-outline-warning" onclick="inccount()">Increment</button>
+        </div>
+    </section>
+
+    <script>
+        let h2Tag = document.getElementById("count");
+        h2Tag.textContent = "0";
+        let c = 0;
+        function inccount() {
+            c++;
+            h2Tag.textContent = c;
+        }
+        function deccount() {
+            if (c > 0) {
+                c--;
+                h2Tag.textContent = c;
+            }
+        }
+    </script>
+</body>
+
+</html>

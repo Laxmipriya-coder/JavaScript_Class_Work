@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    // <!-- Object is a real world entity which is combination of state and Behaviour. 
+    //  State represents the data of the object.
+    //  Behaviour repredsents the functionality of an object. -->
+
+
+    // <!-- Objects  -->
+    // let a = {
+    // name:"A",
+    // age:24,
+    // dept:"MERN",
+    // }
+
+    // console.log(a);
+
+    // console.log(a.name);
+    // console.log(a.age);
+    // console.log(a.dept);
+
+    // let a = {};
+    // console.log(a.toString());
+
+
+    let e1 = {name:"Laxmi",role:"Developer"};
+    let newObj = Object.assign(e1,{id:101,role:"Java Full Stack Developer"});
+    console.log(e1);
+    console.log(newObj);
+
+    let e2 = {name:'Priya',role:'Manager'};
+    let address = {city:"Bhubaneswar",state:"Odisha"};
+
+    let p2 = Object.assign({},e2,address);
+    console.log(p2);
+
+    </script>
+
+</body>
+
+</html>

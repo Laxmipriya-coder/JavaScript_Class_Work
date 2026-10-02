@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let p4 = new Promise((resolve, reject) => {
+            let pass = true;
+            if (pass) {
+                resolve([89, 50, 21, 69, 79]);
+            }
+            else {
+                reject("You have failed the exam");
+            }
+        })
+        console.log(p4);
+        // p4.then((res)=>console.log(res))
+        // p4.catch((err)=>console.log(err))
+        // p4.finally(()=>console.log("Promise Setteled......."))
+
+        p4.then(res => console.log(res)).then(data => console.log(data)).catch(err => console.log(err)).finally((success) => console.log(success ));
+    </script>
+</body>
+
+</html>

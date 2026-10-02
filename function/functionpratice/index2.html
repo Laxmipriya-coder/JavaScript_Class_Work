@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("===== Student Report =====");
+
+        let studentName = "Laxmipriya";
+        let marks = 82;
+
+        console.log("Student Name :", studentName);
+        console.log("Marks :", marks);
+
+        if (marks >= 35) {
+
+            // Block starts
+            let result = "PASS";
+            let grade;
+
+            if (marks >= 90) {
+                grade = "A+";
+            }
+            else if (marks >= 80) {
+                grade = "A";
+            }
+            else if (marks >= 70) {
+                grade = "B";
+            }
+            else if (marks >= 60) {
+                grade = "C";
+            }
+            else {
+                grade = "D";
+            }
+
+            console.log("Result :", result);
+            console.log("Grade :", grade);
+
+            console.log("\nSubjects:");
+
+            let subjects = ["HTML", "CSS", "JavaScript", "React", "Node.js"];
+
+            for (let i = 0; i < subjects.length; i++) {
+
+                // Block inside for loop
+                let subject = subjects[i];
+                console.log((i + 1) + ". " + subject);
+            }
+
+            console.log("\nAttendance:");
+
+            let attendance = 1;
+
+            while (attendance <= 5) {
+                console.log("Day " + attendance + " : Present");
+                attendance++;
+            }
+            {
+                let trainer = "Rahul Sir";
+                let batch = "MERN Stack";
+
+                console.log("\nTrainer :", trainer);
+                console.log("Batch :", batch);
+            }
+
+        }
+        else {
+
+            let result = "FAIL";
+
+            console.log("Result:"+ res);
+        }
+
+    </script>
+</body>
+
+</html>

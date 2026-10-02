@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let s1 = new Promise((success,failure)=>{
+        //     let resolve = true;
+        //     if(resolve){
+        //         success("Data received");
+        //     }
+        //     else{
+        //         failure("Something Went Wrong");
+        //     }
+        // });
+        // console.log(s1);
+
+        // let s2 = new Promise(()=>{});
+        // console.log(s2);
+
+        // let s3 = new Promise((success)=>{
+        //     console.log(success);
+        // });
+        // console.log(s3);
+        // console.log(s3.then((result)=>{
+        //     console.log(result);
+        // }));
+
+        //         let pizza = new Promise((resolve, reject) => {
+        //             let pizzaReddy = true;
+        //             if (pizzaReddy) {
+        //                 resolve("Pizza is ready!!!!!");
+        //             }
+        //             else {
+        //                 reject("Pizza is not available..........")
+        //             }
+        //         });
+        //         pizza.then((result) => {
+        //             console.log(result)
+        //         });
+        //         pizza.catch((error)=>{
+        //             console.log(error);
+        //         });
+        //         pizza.finally(()=>{
+        //             console.log("Your Ordered is Confirmed!!!!!!!!");
+        //         })
+
+        /*let p = new Promise((resolve, reject) => {
+            reject("Failed");
+        });
+
+        p.then((result) => {
+            console.log(result);
+        }).catch((error) => {
+            console.log(error);
+        });*/
+        // let p = new Promise((resolve, reject) => {
+        //     resolve("Success");
+        // });
+        // p.then((result) => {
+        //     console.log(result);
+        // }).then((result)=>{
+        //     console.log(result);
+        // }).catch((error)=>{
+        //     console.log(error);
+        // })
+
+        // console.log("Hello");
+
+        /*console.log("Start");
+        let s1 = new Promise((resolve,reject) => {
+            console.log("Success....");
+            setTimeout(() => {
+                reject("2 seconds have passed");
+            }, 2000);
+        });
+        s1.then((message) => {
+            console.log(message)})
+            .catch((error)=>{
+            console.log(error);
+        });
+        console.log("End");*/
+
+        console.log("Start");
+        setTimeout(()=>{
+            console.log("Timer Function");
+        },2000);
+        Promise.resolve().then(()=>{
+            console.log("Promise-----------");
+        });
+        setTimeout(()=>{
+            console.log("Timer Function 2-----------");
+        },1000)
+        console.log("End");
+
+
+    </script>
+</body>
+
+</html>

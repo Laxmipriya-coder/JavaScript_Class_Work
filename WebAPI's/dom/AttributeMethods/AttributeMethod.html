@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        background-color: yellow;
+        color: black;
+    }
+</style>
+<body>
+    <h1 id = "hii" class="hello">Hii</h1>
+    <script>
+        let h1Tag = document.getElementById("hii");
+        // let a = h1Tag.hasAttribute('id');
+        // console.log(a);
+
+         h1Tag.setAttribute('align','center');
+        // h1Tag.setAttribute('align','left');
+        // h1Tag.setAttribute('align','right');
+
+        // h1Tag.removeAttribute('class');
+        // h1Tag.removeAttribute('align');
+
+        let b = h1Tag.getAttribute('align');
+        console.log(b);
+        let c = h1Tag.attributes;
+        console.log(c);
+    </script>
+</body>
+</html>

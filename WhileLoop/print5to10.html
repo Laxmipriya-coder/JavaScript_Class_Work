@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let num = 5;
+        // while(num >0){
+        //     console.log(num);
+        //     num++;
+        let num = 59;
+        let temp = num;
+        let sum = 0;
+        let prod = 1;
+        while(num > 0){
+            let rem = num%10;
+            sum += rem;
+            prod *= rem;
+            num = Math.trunc(num/10);
+        }
+            if(sum + prod == temp){
+                console.log("It is a special number");
+            }
+            else{
+                console.log("It is not a special number");
+            }
+
+
+        // let num = 59;
+        // let original = num;
+
+        // let sum = 0;
+        // let product = 1;
+
+        // while (num > 0) {
+        //     let digit = num % 10;
+        //     sum  += digit;
+        //     product *= digit;
+        //     num = Math.floor(num / 10);
+        // }
+
+        // if (sum + product == original) {
+        //     console.log("Special Number");
+        // } else {
+        //     console.log("Not a Special Number");
+        // }
+    </script>
+</head>
+
+<body>
+    <h1>Hii</h1>
+</body>
+
+</html>

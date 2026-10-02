@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+    </div>
+     <div id="contain"></div>
+    <script>
+        let divTag = document.getElementById("box");
+        divTag.innerHTML = '<h1>Hello</h1>';
+        let divTag2 = document.getElementById("contain");
+        divTag2.innerHTML = '<p>Hii</p>';
+
+        let names = [{
+            id:1,
+            name:"Laxmi",
+            city:"Bhubaneswar"
+        }];
+        let htmlCode = ''
+        let htmlCode2 = ''
+        names.forEach((ele,ind)=>{
+            htmlCode += `<h1> Hello ${ele.name}</h1>`
+            htmlCode2 += `<p>His city name is ${ele.city}<p>`
+        });
+        divTag.innerHTML = htmlCode;
+        divTag2.innerHTML = htmlCode2;
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(eid,ename){
+            this.eid = eid;
+            this.ename = ename;
+        }
+        console.log(Object.prototype);
+        console.log(Employee.prototype);
+        Employee.prototype.city = "Bangalore";
+        console.log(Employee.prototype);
+        let e1 = new Employee(101,"Kiran");
+        console.log(e1);
+        console.log(e1.ename);
+        console.log(e1.city);
+        let s1 = {sid:101,sname:"Naveen"};
+        console.log(s1);
+        console.log(s1.sname);
+        console.log(s1.city);
+        console.log(e1 instanceof Employee);
+        console.log(s1 instanceof Employee);
+        console.log(e1 instanceof Object);
+        console.log(s1 instanceof Object);
+    </script>
+</body>
+</html>

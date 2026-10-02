@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-yellow{
+            background-color: yellow;
+        }
+        .text-blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id = "hi" class="bg-yellow text-blue">Hello EveryOne</h1>
+
+    <script>
+        let h1Tag = document.getElementById("hi");
+
+        h1Tag.classList.add("text-center");
+        h1Tag.classList.remove("text-blue");
+        
+    </script>
+</body>
+</html>

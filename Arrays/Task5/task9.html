@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Find Number</h1>
+    <input type="number" id="usn">
+    <br><br>
+    <button type="submit" id="find">Find</button>
+    <p id="message"></p>
+
+    <script>
+        let usnInp = document.getElementById("usn");
+        let findBtn = document.getElementById("find");
+        let pTag = document.getElementById("message");
+
+        findBtn.addEventListener("click", () => {
+            let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+            let usnVal = Number(usnInp.value);
+            let find = arr.find((value, index) => {
+                if (value === usnVal) {
+                    pTag.textContent = `${usnVal} is present at index ${index}`;
+                    return true;
+                }
+                return false;
+            });
+
+            if (find === undefined) {
+                pTag.textContent = `${usnVal} is not present in the array`;
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

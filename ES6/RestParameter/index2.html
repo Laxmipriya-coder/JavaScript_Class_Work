@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function sum(...numbers) {
+        //    let b =  numbers.reduce((acc,ele)=> acc+ele);
+        //     console.log(sum(10, 20, 30));
+        // }\
+        // function sum(...numbers) {
+
+        //     let result = numbers.reduce((acc, ele) => acc + ele, 0)
+        //         console.log(result);
+
+        // }
+
+        // sum(10, 20, 30)
+        // ;
+
+        // let arr = [10, 20, 30];
+
+        // let arr2 = [...arr, 40, 50];
+
+        // console.log(arr2);
+
+
+        // function student(name, ...marks) {
+        //     console.log(name);
+        //     console.log(marks);
+        // }
+        // student("Rahul", 80, 90, 85);
+
+        // Find Maximum Number
+        // function findMax(...numbers){
+        //     console.log(numbers);
+        //     let result = numbers.reduce((acc,ele)=>{
+        //        return acc < ele ? ele:acc;
+        //     },0);
+        //     console.log(result);
+        // }
+        // findMax(10, 50, 20, 90, 40);
+
+        // function findMax(...num){
+        //     let result = num.reduce((acc,ele)=>{
+        //         if(acc<ele){
+        //             return ele
+        //         }
+        //         else{
+        //             return acc
+        //         }
+        //     },0);
+        //     console.log(result);
+        // }
+        // findMax(10,50,20,90,40);
+
+
+        // function test(a, ...numbers) {
+        //     console.log(a);
+        //     console.log(numbers);
+        // }
+
+        // test(10, 20, 30, 40);
+
+
+        // let arr1 = [10, 20, 30];
+
+        // let arr2 = [...arr1];
+
+        // arr2.push(50);
+        // arr2.unshift(40);
+        // console.log(arr1,arr2);
+
+
+        // let student = {
+        //     name: "Rahul",
+        //     age: 22
+        // };
+
+        // let student2 = {
+        //     ...student,
+        //     course: "MERN"
+        // };
+
+        // console.log(student2);
+
+        // Sum of Numbers
+        // function sum(...numbers) {
+        //     let result = numbers.reduce((acc,ele)=>{
+        //         return acc+ele;
+        //     },0);
+        //     console.log(result); 
+        // }
+        // sum(5, 10, 15, 20);
+
+        // Find even numbers
+        // function findEven(...numbers){
+        //     let result = numbers.filter((ele)=>{
+        //         if(ele%2==0){
+        //             return ele
+        //         }
+        //     });
+        //     console.log(result);
+        // }
+        // findEven(10, 15, 20, 25, 30);
+
+        // Find minimum number
+        // function findMin(...numbers){
+        //     let result = numbers.reduce((a,e)=>a<e?a:e);
+        //     console.log(result);
+        // }
+        // findMin(50, 20, 80, 10, 40);
+
+        // Combine Both Spread and Rest Operator
+        // let a1 = [];
+        // let a2 = [];
+        // let a3 = [];
+
+        // function combine(...arr){
+        //     console.log(arr);
+        //     let result = [...arr[0], ...arr[1], ...arr[2]];
+        //     console.log(result);
+        // }
+        // combine([1, 2], [3, 4], [5, 6]);
+
+        // let student = {
+        //     name: "Rahul",
+        //     age: 22,
+        //     course: "MERN"
+        // };
+
+        // let { name, ...details } = student;
+
+        // console.log(name);
+        // console.log(details);
+
+
+        // function show(a, b, c) {
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(c);
+        // }
+
+        // let values = [100, 200, 300, 400];
+
+        // show(...values);
+
+        // function addAll(...numbers){
+        //     let newNumbers = [...numbers];
+        //     let result =newNumbers.reduce((a,c)=>{
+        //         if(c%2 == 0){
+        //             return c+a;
+        //         }
+        //         else{
+        //             return a;
+        //         }
+        //     },0);
+        //     console.log(result);
+        // };
+        // addAll(10,20,31,40);
+
+
+        // Calculate both add and Multiply
+
+        // function calculate(operation,...numbers){
+        //     if(operation=="add"){
+        //         let result = numbers.reduce((acc,ele)=>{
+        //             return acc+ele;
+        //         },0);
+        //         console.log(result);
+        //     }
+        //     if(operation =="multiply"){
+        //         let result2 = numbers.reduce((acc,ele)=>{
+        //             return acc*ele;
+        //         },1);
+        //         console.log(result2);
+        //     }
+        // }
+        // calculate("add",10,20,30);
+        // calculate("multiply",2,3,4);
+
+
+        let arr1 = [10, 20];
+        let arr2 = [30, 40];
+
+        function test(...numbers) {
+            console.log(numbers);
+        }
+
+        test(...arr1, ...arr2);
+
+
+        // function mergeArrays(...numbers){
+        //     console.log(numbers);
+        //     let newArr = [...numbers];
+        //     console.log(newArr);
+        // }
+        // mergeArrays([1,2],[3,4],[5,6]);
+
+        //  let a = function(a,b,...c)
+        //  {
+
+        //      console.log(a,b,c);
+        //  }
+        //  console.log(a(10,20,30,40,50,60));
+
+
+
+        // let b = [10, 20, 30];
+        // let c = b;
+        // console.log(b == c);
+        // console.log(b===c);
+
+        // let d = 3;
+        // let e =3;
+        // console.log(d==e);
+        // console.log(d===e);
+
+    </script>
+</body>
+
+</html>

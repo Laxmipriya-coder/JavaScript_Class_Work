@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row" id="display-row">
+
+    </div>
+
+    <script>
+        let displayRow = document.getElementById("display-row");
+        displayRow.innerHTML = "<h1>Hello</h1>"
+
+        let name = ["Laxmi","Tanya","Priya","Sindhu"];
+        let htmlCode = '';
+        name.forEach(function (ele,ind){
+            htmlCode += `<h1>Hello ${ele}</h1>`;
+        });
+        displayRow.innerHTML = htmlCode
+    </script>
+</body>
+</html>

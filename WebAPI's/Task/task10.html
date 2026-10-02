@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a id="link" href="https://google.com">Google</a>
+    <button id="btn">Show URL</button>
+    <p id="res"></p>
+
+    <script>
+        let aTag = document.getElementById("link");
+
+        let button = document.getElementById("btn");
+
+        let result = document.getElementById("res");
+
+        button.addEventListener("click", function(){
+           let aVal =  aTag.getAttribute("href");
+           result.append(aVal);
+
+        })
+    </script>
+</body>
+
+</html>

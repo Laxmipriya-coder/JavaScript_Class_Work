@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="aBtn">Add Image</button>
+    <button id="rBtn">Remove Last Image</button>
+    <div id="gall"></div>
+
+    <script>
+        let addButton = document.getElementById("aBtn");
+        let removeButton = document.getElementById("rBtn");
+        let gallery = document.getElementById("gall");
+
+        addButton.addEventListener("click", function () {
+            let img = document.createElement("img");
+            img.setAttribute("src", "https://gulmahal.in/wp-content/uploads/2025/03/FLORA-Pink-Tulip-Bouquet-2-bd18b823.png.webp");
+            img.setAttribute("height", "300px");
+            gallery.append(img);
+        });
+
+        removeButton.addEventListener("click", function () {
+            // gallery.classList.toggle("https://gulmahal.in/wp-content/uploads/2025/03/FLORA-Pink-Tulip-Bouquet-2-bd18b823.png.webp");
+
+            removeButton.addEventListener("click", function () {
+                let images = gallery.querySelectorAll("img");
+                let lastImage = images[images.length - 1];
+
+                if (lastImage) {
+                    lastImage.remove();
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

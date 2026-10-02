@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="city" onchange="showCity()">
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Bangalore</option>
+    </select>
+
+    <p id="result"></p>
+
+    <script>
+        function showCity() {
+            document.getElementById("result").textContent =
+                document.getElementById("city").value;
+        }
+    </script>
+</body>
+
+</html>

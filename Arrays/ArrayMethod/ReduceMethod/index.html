@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr = [10,20,30,40,50];
+        // let x = arr.reduce((acc,ele)=>{
+        //     console.log(acc,ele);
+        //     return acc+ele;
+        // },0);
+        // console.log(arr);
+        // console.log("Returnrd Value: " + x);
+
+        let arr = [5,10,15,20,25,30,35,40,45,50];
+        let x = arr.reduce((acc,ele,ind) =>{
+            console.log(acc,ele,ind);
+            return acc+ ele;
+        },0);
+        console.log(arr);
+        console.log("Returned Value " + x);
+
+        // let a = [5,10,15,20];
+        // let x = a.reduce((acc,e)=>{
+        //     console.log(acc,e);
+        //     return acc+ e
+        // },0)
+        // console.log(x);
+        // let prod = [2,4,6,8];
+        // let large = prod[0];
+        
+        // let x = prod.reduce((acc,ele)=>{
+        //     if(acc<ele){
+        //         return large = ele;
+        //     };
+           
+        // },0);
+        // console.log(large);
+        // console.log(prod);
+
+    </script>
+</body>
+</html>

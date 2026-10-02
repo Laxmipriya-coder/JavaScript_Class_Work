@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+        <h1 class="bg-warning text-center" id="greet">Hii</h1>
+        <button id="btn"onclick="btncli()" class="btn btn-outline-success mt-4  text-center">Click</button>
+        
+    </div>
+    <!-- JavaScript Code -->
+     <script>
+        let count = 0;
+        function btncli(){
+            count+=1;
+            console.log("I am Clicked " + count);
+        }
+
+        let h1Tag = document.getElementById("greet");
+        h1Tag.textContent = "Hello Sunshine";
+
+
+        let btn = document.getElementById("btn");
+        btn.textContent = "Hello Sunshine";
+     </script>
+</body>
+</html>

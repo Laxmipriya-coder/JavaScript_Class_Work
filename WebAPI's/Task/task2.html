@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+</head>
+
+<body>
+    <div class="p-4 text-center">
+        <p id="res"></p>
+        <p id="res2"></p>
+        <p id="res3"></p>
+        <button id="btn1" class="btn btn-outline-warning" onclick="greet1()">Hiii</button>
+        
+        <button id="btn2" class="btn btn-outline-success">Hello</button>
+
+        <button id="btn3" class="btn btn-outline-danger">Bye</button>
+    </div>
+    <script>
+        // 1st button -- Hii SunShine
+        function greet1() {
+            document.getElementById("btn1")
+            res.textContent = "Hii SunShine";
+        }
+
+        // 2nd Button -- Hello SunShine
+        btn2.onclick = function () {
+            document.getElementById("btn2")
+            res2.textContent = "Hello SunShine";
+        }
+
+        // 3rd Button -- Bye SunShine 
+        let btn3 = document.getElementById("btn3");
+
+        btn3.addEventListener("click", function () {
+            document.getElementById("btn3")
+            res3.textContent = "Bye SunShine";
+        })
+    </script>
+</body>
+
+</html>

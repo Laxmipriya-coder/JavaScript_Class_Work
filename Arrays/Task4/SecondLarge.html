@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [10,45,20,89,67];
+        let largest = numbers[0];
+        let secondlag = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > largest) {
+                secondlag = largest;
+                largest = numbers[i];
+            }
+            else if (numbers[i] > secondlag && numbers[i] != largest) {
+                secondlag = numbers[i];
+            }
+        }
+        console.log("First Largest:", largest);
+        console.log("Second Largest:", secondlag);
+    </script>
+</body>
+
+</html>

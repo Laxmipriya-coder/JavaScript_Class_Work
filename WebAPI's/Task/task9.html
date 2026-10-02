@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+         <button id="btn">Change Image</button>
+    </section>
+    
+     <br><br>
+     <div>
+         <img id="myImage" src="./Bunny.jpg" alt="Image">
+     </div>
+    <script>
+        let image = document.getElementById("myImage");
+
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click",function(){
+            image.setAttribute("src","https://i.pinimg.com/736x/bc/39/ab/bc39abb5e03d0feef6e4523f22e03fb2.jpg")
+            image.setAttribute("height","500px");
+        })
+    </script>
+</body>
+</html>

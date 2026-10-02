@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="usn">
+    <button id="add">Add</button>
+    <button id="remove">Remove last</button>
+    <h1 id="message"></h1>
+
+    <script>
+        let arr = [];
+        let usnInp = document.getElementById("usn");
+        let btn = document.getElementById("add");
+        let rembtn = document.getElementById("remove");
+        let h1Tag = document.getElementById("message");
+        
+        btn.addEventListener("click",(e)=>{
+            let usnVal = usnInp.value;
+            arr.push(usnVal);
+            usnInp.usnVal = "";
+            console.log(arr);
+            h1Tag.textContent = `[${arr}]`
+        });
+
+        rembtn.addEventListener("click",(e)=>{
+            arr.pop();
+            h1Tag.textContent = `[${arr}]`;
+        })        
+    </script>
+</body>
+</html>

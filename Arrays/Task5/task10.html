@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Square of Numbers</h1>
+    <input type="number" id="usnnumber">
+    <br><br>
+    <button id="square">Square</button>
+    <p id="text"></p>
+
+    <script>
+        let usnInp = document.getElementById("usnnumber");
+        let squBtn = document.getElementById("square");
+        let pTag = document.getElementById("text");
+
+        squBtn.addEventListener("click",()=>{
+            let a=[];
+            let usnVal = usnInp.value;
+            let square = usnVal*usnVal;
+            a.push(square);
+            pTag.textContent = `[${a}]`;
+        })
+    </script>
+</body>
+</html>

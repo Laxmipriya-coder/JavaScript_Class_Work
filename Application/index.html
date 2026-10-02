@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function main(){
+        //     var a = 10;
+        //     console.log(a);
+        //     // 10
+        //     a++;
+        //     // 10 a =11
+        //     let b =a;
+        //     // b=11
+        //     b++;
+        //     // 11 b= 12
+        //     a = b++ + b;
+        //     // a = 12+13= 25
+        //     // b=13;
+        //     console.log(b);
+        //     // 25
+        //     return [a,b];
+        // }
+        // console.log(main());
+
+        // let arr = [2,3,5,7];
+        // let double = arr.map(ele => ele*2);
+        // let greater = double.filter(ele => ele>10);
+        // console.log(greater);
+
+
+        // function greet(name){
+        //     console.log("Hello " + name);
+        // }
+        // function welcome(callback){
+        //     callback("Laxmi");
+        // }
+        // welcome(greet);
+        // greet(welcome())
+        //         function test(a, b = 10) {
+        //     return a + b;
+        // }
+
+        // console.log(test(5, undefined));
+        // console.log(test(5, null));
+
+        let x = 10;
+
+        function test() {
+            let x = 20;
+
+            function inner() {
+                console.log(x);
+            }
+
+            inner();
+        }
+
+        test();
+        console.log(x);
+
+    </script>
+</body>
+
+</html>

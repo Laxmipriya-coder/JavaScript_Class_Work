@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="hi">Hello SunShine</h1>
+    <button id="btn">Change</button>
+
+    <script>
+        let h1Tag = document.getElementById("hi");
+        // h1Tag.style.color='red';
+        // h1Tag.style.backgroundColor='yellow';
+
+        let butt = document.getElementById("btn");
+        butt.addEventListener("click",function(){
+            h1Tag.style.color='blue';
+            h1Tag.style.backgroundColor="yellow";
+            h1Tag.style.textAlign="center";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let students = [
+            {
+                name: "Rahul",
+                marks: 80
+            },
+            {
+                name: "Priya",
+                marks: 35
+            },
+            {
+                name: "Arun",
+                marks: 25
+            },
+            {
+                name: "Kiran",
+                marks: 70
+            }
+        ]
+
+        students.forEach((value,index) => {
+            if (value.marks < 40){
+                students.splice(index,1);
+                index--;
+            }
+        });
+        console.log(students);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        let divTag = document.getElementById("box")
+        let a = [{name:"laxmi",gender:"female"},
+            {name:"sam",gender:"male"}
+        ];
+        let htmlCode = "";
+        a.for((ele)=>
+            htmlCode += `<h1>${ele.name}</h1>`
+        );
+        divTag.innerHTML = htmlCode;
+    </script>
+</body>
+</html>

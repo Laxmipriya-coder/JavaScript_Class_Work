@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <button id = "btn" class="text-center btn btn-outline-info gap-2 col-2 shadow-lg" type="button">Add</button>
+    <div id = "box"></div>
+
+    
+    <script>
+        let butt = document.getElementById("btn");
+        let container = document.getElementById("box");
+
+        butt.addEventListener("click",function(){
+          let p=  document.createElement("p");
+          p.textContent="Hello";
+          box.append(p);
+        })
+    </script>
+</body>
+</html>

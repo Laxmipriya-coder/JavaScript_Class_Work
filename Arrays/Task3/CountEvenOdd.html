@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [10,15,20,25,30,35];
+        let count1 = 0;
+        let count2 = 0;
+
+        numbers.forEach((value)=>{
+            if(value%2 == 0){
+                count1++;
+            }
+            else{
+                count2++;
+            }
+        })
+        console.log("Even count: " + count1);
+        console.log("Odd count: " + count2);
+    </script>
+</body>
+</html>

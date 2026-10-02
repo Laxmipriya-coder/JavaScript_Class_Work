@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <button id="addBtn" class="btn btn-success">Add Box</button>
+
+    <div id="container"></div>
+
+    <script>
+        let button = document.getElementById("addBtn");
+        let container = document.getElementById("container");
+
+        button.addEventListener("click", function(){
+            let divTag = document.createElement("div");
+            divTag.textContent = "New Box";
+            container.append(divTag);
+        })
+    </script>
+</body>
+
+</html>

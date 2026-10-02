@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        section{
+            height: 150px;
+            width: 250px;
+            background-color: lightblue;
+            padding: 20px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 10px 10px 10px lightgray;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+        }
+        h1:hover{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login Form</h1>
+    <section>
+        <div>
+        <form id="form-ele">
+            <label for="usn">User Name</label>
+            <input type="text" name="user-name" id="usn" value="">
+            <br><br>
+            <label for="psd">Password</label>
+            <input type="password" name="pass-word" id="psd" value="">
+            <br><br>
+            <label for="emn">Email</label>
+            <input type="email" name="email-name" id="emn" value="">
+            <br><br>
+            <input type="submit" value="Login">
+        </div>
+    </section>
+    <br><br>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; text-align: center;">
+        <h2 id="text" ></h2>
+        <h3 id="text-email"></h3>
+    </div>
+    <script>
+        let formEle = document.getElementById("form-ele");
+        let usnInput = document.getElementById("usn");
+        let pwdInput = document.getElementById("psd");
+        let emnInput = document.getElementById("emn");
+
+        formEle.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // User Name
+            let usnValue = usnInput.value;
+            let h2Tag = document.getElementById("text");
+            h2Tag.textContent = "Welcome " + usnValue;
+            h2Tag.style.color = "black";
+            h2Tag.style.backgroundColor = "grey"
+            h2Tag.style.width = "300px";
+            h2Tag.style.height = "50px";
+            h2Tag.style.borderRadius = "5px";
+
+            // Email Id
+            let emValue = emnInput.value;
+            let h3Tag = document.getElementById("text-email");
+            h3Tag.textContent = "Email id " + emValue;
+            h3Tag.style.color = "white";
+            h3Tag.style.backgroundColor = "black"
+            h3Tag.style.width = "300px";
+            h3Tag.style.height = "50px";
+            h3Tag.style.borderRadius = "5px";
+
+
+
+        })
+    </script>
+    </form>
+</body>
+
+</html>

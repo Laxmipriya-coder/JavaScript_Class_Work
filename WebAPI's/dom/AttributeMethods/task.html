@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .theme {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+        }
+
+        .butt {
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+
+        .but {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn" class="butt">Change to Dark</button>
+    <h1 id="box" class="theme theme-light">Current Theme: <span id="text">Light</span></h1>
+
+
+    <script>
+        let bTag = document.getElementById("btn");
+        let h1Tag = document.getElementById("box");
+        let Themetesxt = document.getElementById("text");
+        bTag.addEventListener("click", function () {
+            h1Tag.classList.toggle("dark");
+            bTag.classList.toggle("but");
+
+            if (h1Tag.classList.contains("dark")) {
+                bTag.textContent = "Change to Light";
+                Themetesxt.textContent = "Dark";
+            } else {
+                bTag.textContent = "Change to Dark";
+                Themetesxt.textContent = "Light";
+            }
+        });
+    </script>
+</body>
+
+</html>

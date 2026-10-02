@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="message">0</h1>
+    <button id="like">Likes</button>
+    <button id="dislike">Dislike</button>
+
+    <script>
+        let likebtn = document.getElementById("like");
+        let dislike = document.getElementById("dislike");
+        let h1Tag = document.getElementById("message");
+        let likeCount = 0;
+
+        likebtn.addEventListener("click",function(){
+            likeCount++;
+            h1Tag.textContent = likeCount;
+            localStorage.getItem(likeCount);
+        })
+    </script>
+</body>
+</html>

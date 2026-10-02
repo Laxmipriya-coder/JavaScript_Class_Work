@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row" id="display-row" style="text-align: center;"></div>
+
+
+    <!-- Script Code -->
+    <script>
+
+        let displayRow = document.getElementById("display-row");
+        let student = [
+            { name: "Laxmi", id: 101, age: 22, department: "MCA", gender: "female" },
+            { name: "Rahul", id: 102, age: 25, department: "BCA", gender: "male" },
+            { name: "Sambit", id: 103, age: 24, department: "BBA", gender: "male" },
+            { name: "Iti", id: 104, age: 23, department: "B.Tech", gender: "female" },
+            { name: "Sikha", id: 105, age: 24, department: "BSc", gender: "female" },
+            { name: "Rudra", id: 106, age: 26, department: "MCA", gender: "male" },
+            { name: "Priya", id: 107, age: 22, department: "BBA", gender: "female" }
+        ];
+
+        function displayData(data = student) {
+            let htmlCode = `
+                <h1>Student Details</h1>
+                <button onclick="displayData()">All</button>
+                <button onclick="genderFilter('male')">Male</button>
+                <button onclick="genderFilter('female')">Female</button>
+                <br><br>
+                <table border="2">
+                    <tr>
+                        <th>Name</th>
+                        <th>Id</th>
+                        <th>Age</th>
+                        <th>Department</th>
+                        <th>Gender</th>
+                    </tr>
+            `;
+            data.forEach(function (ele, ind) {
+                htmlCode += `<tr>
+                        <td>${ele.name}</td>
+                        <td>${ele.id}</td>
+                        <td>${ele.age}</td>
+                        <td>${ele.department}</td>
+                        <td>${ele.gender}</td>
+                    </tr>`;
+            });
+            htmlCode += `</table>`;
+            displayRow.innerHTML = htmlCode;
+        }
+
+        function genderFilter(gender) {
+            let target = student.filter(function (ele) {
+                return ele.gender == gender;
+            });
+            displayData(target);
+        }
+        displayData();
+    </script>
+</body>
+
+</html>

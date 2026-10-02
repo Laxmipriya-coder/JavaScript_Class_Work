@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Expense Calculator</h1>
+        <div class="card shadow mx-auto" style="max-width: 500px;">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Total Amount</label>
+                    <input type="number" class="form-control" placeholder="Enter Your Total Amount" id="tat" value="">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Your Expense</label>
+                    <input type="number" class="form-control" placeholder="Enter Your Expense Amount" id="exp" value="">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Your Friend Expense</label>
+                    <input type="number" class="form-control" placeholder="Enter Your Friend Expenses" id="fexp">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Who Will Pay?</label>
+
+                    <select class="form-select" id="payment">
+                        <option value="Select">Select</option>
+                        <option value="You">You</option>
+                        <option value="Your Friend">Your Friend</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-success w-100" id="btn">
+                    Calculate Expense
+                </button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+      <h2 id="text"></h2>
+
+    <!-- JavaScript Code -->
+
+    <script>
+        let total = document.getElementById("tat");
+        let expen = document.getElementById("exp");
+        let frExpen = document.getElementById("fexp");
+        let butt = document.getElementById("btn");
+        let opt1 = document.getElementById("you")
+
+        expen.addEventListener("input", function () {
+            let totalVal = Number(total.value);
+            let expVal = Number(expen.value);
+            let frval = totalVal - expVal;
+            frExpen.value = frval;
+        });
+
+        butt.addEventListener("click", function () {
+            let pay = document.getElementById("payment").value;
+            let h2Tag = document.getElementById("text");
+
+            if (pay === "You") {
+                h2Tag.textContent = "You paid bill";
+                h2Tag.style.textAlign = "center";
+                h2Tag.style.backgroundColor = "pink";
+            }
+            else if (pay === "Your Friend") {
+                h2Tag.textContent = "Your Friend paid bill";
+                h2Tag.style.textAlign ="center";
+                h2Tag.style.backgroundColor = "pink";
+            }
+        })
+    </script>
+</body>
+
+</html>

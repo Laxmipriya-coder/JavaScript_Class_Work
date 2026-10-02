@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Replace an Item</h1>
+    <label for="">Position: </label>
+    <input type="number" id="userPosition">
+    <br><br>
+    <label for="">New Item: </label>
+    <input type="number" id="item">
+    <br><br>
+    <button type="submit" id="btn">Replace</button>
+    <h2 id="message"></h2>
+
+    <script>
+        let usnPos = document.getElementById("userPosition");
+        let usnitem = document.getElementById("item");
+        let repBtn = document.getElementById("btn");
+        let h2Tag = document.getElementById("message");
+
+        repBtn.addEventListener("click",()=>{
+            let arr = [20,40,50,45,32,65];
+            let usnVal = usnPos.value;
+            let usnitemVal = usnitem.value;
+
+            arr.splice(usnVal,0,usnitemVal);
+            h2Tag.textContent = `[${arr}]`;
+            console.log(arr);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Times New Roman;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button{
+            background-color: rgb(234, 85, 248);
+            color: white;
+            width: 120px;
+            height: 40px;
+            border-radius: 3px;
+            box-shadow: 5px 5px 5px pink;
+            opacity:80%;
+        }
+        button:hover{
+            background-color: rgb(175, 12, 230);
+            cursor: pointer;
+            opacity:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+    <button>Enter a Number</button>
+    <h2 id ="result"></h2>
+    </section>
+    <script>
+        let btn1 = document.querySelector("button");
+        let res = document.getElementById("result");
+
+        btn1.addEventListener("click", function () {
+            let number = prompt("Enter a number");
+            console.log("The number user entered is: " + number);
+
+            if(number%2 == 0){
+                res.textContent = "The Number is Even";
+            }
+            else{
+                res.textContent = "The Number is Odd";
+            }
+
+        });
+    </script>
+</body>
+
+</html>

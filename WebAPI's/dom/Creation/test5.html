@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sel">
+        <button id="btn-1">
+            Remove
+        </button>
+        
+        <button id = btn-2>
+            Remove Child
+        </button>
+    </div>
+
+    <script>
+        let h2Tag = document.createElement('h2');
+        h2Tag.textContent = "This is a heading Tag";
+        console.log(h2Tag);
+        // document.body.append(h2Tag);
+
+
+        let divTag = document.createElement('div');
+        divTag.textContent= "This is a div  tag";
+
+        // Append method append();
+        let pTag = document.createElement('p');
+        pTag.textContent = "Something Went Wrong";
+        console.log(pTag);
+        let a = document.body.append(h2Tag,pTag,divTag,'Hiii');
+
+        // Append Child Method
+
+        let para = document.createElement('p');
+        para.textContent= "Hello everyone";
+        console.log(para);
+        let b = document.body.appendChild(para);
+
+        // In append child it dont accept strings
+
+
+
+
+        // Remove Dynamically
+
+        document.getElementById('btn-2').addEventListener('click',function(){
+            h5Tag.removeChild();
+        })
+
+        let h5Tag = document.createElement('h5');
+        h5Tag.textContent = "Hii Laxmi";
+        divTag.append(h5Tag);
+
+        document.getElementById('sel').addEventListener('click',function(){
+            para.remove();
+        })
+    </script>
+</body>
+</html>

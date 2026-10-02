@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Number: </label>
+    <input type="number" id="userNumber">
+    <br><br>
+    <label for="">Position: </label>
+    <input type="number" id="userPosition">
+    <br><br>
+    <button id="add">Insert</button>
+    <h1 id="message"></h1>
+    <script>
+        let usnNum = document.getElementById("userNumber");
+        let usnPosition = document.getElementById("userPosition");
+        let addBtn = document.getElementById("add");
+        let h1Tag = document.getElementById("message");
+        let h2Tag = document.getElementById("mess");
+
+        addBtn.addEventListener("click",()=>{
+            let a = [40,52,41,60,80,35,22,19]
+            let usnVal = Number(usnNum.value);
+            let usnPoVal = Number(usnPosition.value);
+            a.splice(usnPoVal, 0, usnVal);
+            console.log(a);
+            h1Tag.textContent = `[${a}]`;
+        })
+    </script>
+</body>
+</html>

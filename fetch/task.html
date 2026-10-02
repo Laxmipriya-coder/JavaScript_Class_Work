@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        body{
+            margin: 0px;
+        }
+        .navbar {
+            width: 100%;
+            height: 70px;
+            font-weight: bold;
+            background-color: #ffc107;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>
+            Products Details
+        </h1>
+    </nav>
+    <div id="container"></div>
+    <script>
+        let p1 = fetch("https://dummyjson.com/products")
+        // console.log(p1);
+
+        let p2 = p1.then((response) => {
+            // console.log(response);
+            return response.json()
+        })
+            .then((data) => {
+                console.log(data);
+                data.products.forEach((items) => {
+                    // console.log(items);
+                    let box = document.getElementById("container");
+                    let divTag = document.createElement("div");
+
+                    divTag.style.border = "1px solid black"
+                    divTag.style.width = "250px"
+                    divTag.style.padding = "10px"
+                    divTag.style.margin = "10px"
+                    divTag.style.alignItems = "center"
+                    divTag.innerHTML = `
+                <h2 style = "text-align:center; color:blue">${items.title}</h2>
+                <p>Price : &#8377 ${items.price}</p>
+                <p>Rating : ${items.rating}</p>
+                <p style="text-align: justify;">Description : ${items.description}</p>
+
+                <img src="${items.images[0]}" width="250px" height="200px">
+                `
+                    box.appendChild(divTag);
+                })
+            })
+    </script>
+</body>
+
+</html>

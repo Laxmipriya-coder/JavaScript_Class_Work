@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*console.log("1");
+        setTimeout(() => {
+            console.log("2");
+        }, 0);
+        Promise.resolve().then(() => {
+            console.log("3");
+        });
+        Promise.resolve().then(() => {
+            console.log("4");
+        });
+        console.log("5");*/
+
+        let p = new Promise((resolve, reject) => {
+            resolve(10);
+        });
+
+        p.then((value) => {
+            console.log(value);
+            console.log(value * 2);
+            return value
+        }).then((value) => {
+            console.log(value);
+        });
+
+        // let p = new Promise((resolve, reject) => {
+        //     resolve(10);
+        // });
+
+        // p.then((value) => {
+        //     console.log(value);
+        //     return value + 5;
+        // }).then((value) => {
+        //     console.log(value);
+        //     return value * 2;
+        // }).then((value) => {
+        //     console.log(value);
+        // });
+
+        // console.log("A");
+
+        // let p = new Promise((resolve, reject) => {
+        //     console.log("B");
+        //     setTimeout(() => {
+        //         console.log("C");
+        //         resolve("D");
+        //     }, 0);
+        // });
+
+        // p.then((value) => {
+        //     console.log(value);
+        // });
+
+        // console.log("E");
+
+
+
+        // Important Task------ 
+        
+        // console.log("1");
+
+        // Promise.resolve().then(() => {
+        //     console.log("2");
+
+        //     Promise.resolve().then(() => {
+        //         console.log("3");
+        //     });
+
+        //     console.log("4");
+        // });
+
+        // console.log("5");
+
+        // console.log("Start");
+        // Promise.resolve().then(()=>{
+        //     console.log("Hii");
+        //     setTimeout(()=>{
+        //         console.log("Hello");
+        //     },2000);
+        //     console.log("Bye");
+        // })
+        // console.log("End");
+    </script>
+</body>
+
+</html>

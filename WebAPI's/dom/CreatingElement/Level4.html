@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: none;
+        }
+        #hi{
+            color: plum;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" >Click Me</button>
+    <h1 id="hi" class="box">Good Morning</h1>
+
+    <script>
+        let btn1 = document.getElementById("btn");
+        let h1Tag = document.getElementById("hi");
+       
+        btn1.addEventListener("click",function(){
+            if(h1Tag.hasAttribute('class')){
+                h1Tag.removeAttribute('class')
+            }
+            else{
+                h1Tag.setAttribute('class','hide')
+            }
+        })
+        
+
+    </script>
+</body>
+</html>

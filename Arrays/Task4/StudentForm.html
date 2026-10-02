@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Mark Calculator</h1>
+    <form id ="form-ele">
+        <label>Student Name</label>
+        <input type="text" id="name" value="">
+        <br><br>
+        <label>Java Marks</label>
+        <input type="number" value="" id="jm">
+        <br><br>
+        <label>JavaScript Marks</label>
+        <input type="number" id="jsm" value="">
+        <br><br>
+        <label>HTML Mark</label>
+        <input type="number" id="htm" value="">
+        <br><br>
+        <input type="submit" value="Submit" id="btn">
+    </form>
+    <h1 id="hi"></h1>
+    <h2 id="hello"></h2>
+
+    <script>
+        let formEle = document.getElementById("form-ele");
+        let javaMark = document.getElementById("jm");
+        let javaScriptMark = document.getElementById("jsm");
+        let htmlMark = document.getElementById("htm");
+        let butt = document.getElementById("btn");
+        let sname = document.getElementById("name")
+
+        formEle.addEventListener("submit",function(e){
+            e.preventDefault();
+            let jval = javaMark.value;
+            let jsval = javaScriptMark.value;
+            let hval = htmlMark.value;
+            let sval = sname.value;
+            let h1Tag = document.getElementById("hi");
+            let h2Tag = document.getElementById("hello")
+            let sum = Number(jval) + Number(jsval) + Number(hval);
+            h1Tag.append("Total Mark of "+ sval + " is " + sum);
+            let avg = sum/3;
+            h2Tag.append("The average  "  +  " is " + avg);
+        })
+    </script>
+</body>
+</html>

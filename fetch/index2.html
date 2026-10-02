@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Products Details</h1>
+    <div id="box">
+
+    </div>
+    <script>
+        function makeProduct() {
+            let p = window.fetch("https://dummyjson.com/products");
+            console.log(p);
+
+            let p2 = p.then((result)=>{
+               return result.json();
+            });
+            
+            p2.then((data)=>{
+                console.log(data);
+                let divTag = document.getElementById("box");
+                data.products.forEach(item=>{
+                    let pTag = document.createElement("p");
+                    pTag.innerHTML=` <b>${item.title}</b>
+                    <p>${item.brand}</p>`
+                    divTag.append(pTag);
+                })
+            })
+        }
+        makeProduct();
+    </script>
+</body>
+
+</html>

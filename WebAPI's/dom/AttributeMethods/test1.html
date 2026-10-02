@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        #box{
+            background-color: violet;
+            color: chartreuse;
+            font-size: 20px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <div class="hide" id="box">
+        <h1>Hello I am here!!</h1>
+    </div>
+
+    <script>
+        let butt = document.getElementById('btn');
+        let divTag = document.getElementById('box');
+
+        butt.addEventListener("click",function(){
+            if(divTag.hasAttribute('class')){
+                divTag.removeAttribute('class')
+            }
+            else{
+                divTag.setAttribute('class','hide')
+            }
+        })
+    </script>
+</body>
+</html>

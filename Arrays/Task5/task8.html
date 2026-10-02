@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Enter Number : </label>
+    <input type="number" id="num">
+    <br><br>
+    <button id="add">Add</button>
+    <br><br>
+    <button id="even">Show Even Values</button>
+    <button id="odd">Show Odd Values</button>
+    <br><br>
+    <label for="">Enter the value of n : </label>
+    <input type="number" id="nthvalue">
+    <br><br>
+    <button id="filter">Filter greater than n</button>
+    <p id="text"></p>
+    <p id="mess"></p>
+    <p id="mess2"></p>
+    <p id="mess3"></p>
+
+    <script>
+        let usnInp = document.getElementById("num");
+        let addBtn = document.getElementById("add");
+        let evenBtn = document.getElementById("even");
+        let oddBtn = document.getElementById("odd");
+        let nthInp = document.getElementById("nthvalue");
+        let filterBtn = document.getElementById("filter");
+        let pTag = document.getElementById("text");
+        let p2Tag = document.getElementById("mess");
+        let p3Tag = document.getElementById("mess2");
+        let p4Tag = document.getElementById("mess3");
+
+        let arr = [10, 15, 20, 25, 30, 35, 40, 45, 50];
+        // Add Button
+        addBtn.addEventListener("click", () => {
+            let usnVal = Number(usnInp.value);
+            arr.push(usnVal);
+            pTag.textContent = `[${arr}]`;
+        })
+
+        // Even Number
+        evenBtn.addEventListener("click", () => {
+            let evenValues = arr.filter((value) => value % 2 == 0);
+
+            p2Tag.textContent = `[${evenValues}]`;
+        });
+
+        // Odd Number 
+        oddBtn.addEventListener("click", () => {
+            let oddValues = arr.filter((value) => value % 2 != 0);
+
+            p3Tag.textContent = `[${oddValues}]`;
+        });
+
+        // Nth value 
+        filterBtn.addEventListener("click",()=>{
+            let nthVal = nthInp.value;
+            let filterValues = arr.filter((value) => value > nthVal);
+            p4Tag.textContent = `[${filterValues}]`;
+        })
+    </script>
+</body>
+
+</html>

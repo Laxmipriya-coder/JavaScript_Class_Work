@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="p-4 text-center">
+        <img src="./Bunny.jpg" alt="" height="300" width="300">
+    </nav>
+    <div style="border: 5px solid black">
+    <div class="text-center m-3">
+        <div class="d-flex justify-content-center">
+       
+        <button id="btn1" class="btn btn-outline-danger">Likes❤️
+        </button>
+         <p id="like" class="text-center">Like : 0</p>
+        <br><br>
+        
+        <button id="btn2" class="btn btn-outline-warning">Dislikes💔</button>
+        <p id="dislike" class="text-center">0</p>
+        </div>
+        <br><br>
+        
+        <button id="btn3" class="btn btn-outline-primary d-grid">Total Count</button>
+        <p id="total" class="text-center">0</p>
+    </div>
+    </div>
+
+    <!-- Script Tag -->
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let like = document.getElementById("like");
+        let dislike = document.getElementById("dislike");
+        let total = document.getElementById("total");
+        let c = 0;
+
+        let d = 0;
+
+        btn1.addEventListener("click", function () {
+            c++;
+            like.textContent = c;
+        }
+        );
+
+        btn2.addEventListener("click", function () {
+                d++;
+                dislike.textContent = d;
+        }
+        );
+
+        btn3.addEventListener("click",function(){
+            total.textContent = c+d;
+
+        })
+    </script>
+</body>
+
+</html>

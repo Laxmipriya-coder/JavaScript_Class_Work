@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        font-family: Times New Roman;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button{
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: rgb(227, 10, 213);
+        box-shadow: 5px 5px 5px plum;
+        opacity: 60%;
+    }
+    button:hover{
+        opacity: 100%;
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <section>
+        <button onclick="getName()">Enter a Name</button>
+        <h2 id ="result"></h2>
+    </section>
+
+    <!-- JavaScript Code -->
+     <script>
+        function getName(){
+            let name = prompt("Enter a Name");
+            console.log("The name entered is: " + name);
+           result.textContent = "The name  entered is: " + name + " and, the length of the name is: " + name.length;
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Counter</title>
+</head>
+<body>
+    <button id="like">Likes</button><p id="message">Like Count - 0</p>
+    <button id="dislike">Dislike</button>  <p id="mess">Dislike Count - 0</p>
+
+    <script>
+        let likebtn = document.getElementById("like");
+        let dislike = document.getElementById("dislike");
+        let pTag = document.getElementById("message");
+        let messTag = document.getElementById("mess");
+
+        let likeCount = localStorage.getItem("likeCount") || 0;
+        pTag.textContent = likeCount;
+        likebtn.addEventListener("click", function() {
+            likeCount++;
+            pTag.textContent = likeCount;
+            localStorage.setItem("likeCount", likeCount);
+        });
+
+        let dislikeCount = localStorage.getItem("dislikeCount") || 0;
+        messTag.textContent = dislikeCount;
+        dislike.addEventListener("click",function(){
+            dislikeCount++;
+            messTag.textContent = dislikeCount;
+            localStorage.setItem("dislikeCount",dislikeCount);
+        });
+        
+    </script>
+</body>
+</html>

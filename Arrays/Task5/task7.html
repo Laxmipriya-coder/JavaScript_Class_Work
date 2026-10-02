@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get Element</h1>
+    <label for="">Start : </label>
+    <input type="number" id="start">
+    <br><br>
+    <label for="">End : </label>
+    <input type="number" id="end">
+    <br><br>
+    <button type="submit" id="btn">Get</button>
+    <h2 id="message"></h2>
+
+    <script>
+        let startEle = document.getElementById("start");
+        let endEle = document.getElementById("end");
+        let getBtn = document.getElementById("btn");
+        let h2Tag = document.getElementById("message");
+
+        getBtn.addEventListener("click",()=>{
+            let arr = [5,15,25,35,45,55,65,75,85,95];
+            let startVal = startEle.value;
+            let endVal = endEle.value;
+            let result = arr.slice(startVal,endVal);
+            h2Tag.textContent = `[${result}]`;
+            // console.log(arr);
+        })
+    </script>
+</body>
+</html>

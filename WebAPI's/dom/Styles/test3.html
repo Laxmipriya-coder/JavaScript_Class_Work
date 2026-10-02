@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form-ele">
+        <label for="usn">User Name</label>
+        <input type="text" id="usn" value="">
+        <br><br>
+        <input type="submit">
+    </form>
+    <h3 id="usn-text"></h3>
+
+    <script>
+        let formEle = document.getElementById("form-ele");
+
+        let inputTag = document.getElementById("usn");
+
+        formEle.addEventListener("submit",function(event){
+            event.preventDefault();
+            console.log(event);
+            let usnValue = inputTag.value;
+            console.log("Form Submitted");
+            document.getElementById('usn-text').textContent=usnValue;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let m= 2;
+        let y = 2024;
+
+        if(m==1 || m==3 || m==5 || m==7 || m==8 || m==10 || m ==12){
+            console.log("31 Days");
+        }
+        else if(m==4 || m==6 || m==9 || m==11){
+            console.log("30 Days");
+        }
+        else if(m==2){
+            if ( y%4 == 0 && y%100 != 0 || y%400 ==0){
+                console.log("29 Days");
+            }
+            else{
+                console.log("28 Days");
+            }
+        }
+        else{
+            console.log("Not a month");
+        }
+    </script>
+</head>
+<body>
+    <h1>Hii</h1>
+</body>
+</html>

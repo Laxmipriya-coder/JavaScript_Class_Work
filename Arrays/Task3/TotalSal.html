@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let employees = [
+            {
+                name: "Rahul",
+                salary: 25000
+            },
+            {
+                name: "Priya",
+                salary: 35000
+            },
+            {
+                name: "Arun",
+                salary: 45000
+            }
+        ];
+
+        let sum = 0;
+        employees.forEach((value) =>{
+            sum += value.salary;
+        });
+        console.log(sum);
+    </script>
+</body>
+</html>

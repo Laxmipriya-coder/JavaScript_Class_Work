@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar bg-warning">
+        <div class="container-fluid">
+                <h1>Navbar</h1>
+        </div>
+    </nav>
+    <section class="m-3 container-fluid">
+        <div class="row" id="display-row">
+        </div>
+    </section>
+
+
+    <script>
+
+        let displayRow = document.getElementById("display-row");
+
+        let names = [
+            { name: "Laxmi", id: 101, city: "Bhubaneswar", tickets: 1, price: 200 },
+            { name: "Priya", id: 102, city: "Banglore", tickets: 1, price: 500 },
+            { name: "Tanaya", id: 103, city: "Goa", tickets: 2, price: 300 },
+            { name: "Sindhu", id: 104, city: "Kolkata", tickets: 2, price: 750 },
+            {name:"Sam",id:105,city:105,city:"Banglore",tickets:3,price:850},
+            {name:"Sambhu",id:106,city:"Goa",tickets:4,price:900}            
+        ];
+        function displayData() {
+
+    let htmlCode = '';
+
+    names.forEach(function (ele, ind) {
+
+        htmlCode += `
+            <div class="col-4 mb-3">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4>${ele.name}</h4>
+                        <p>${ele.city}</p>
+                        <p>
+                            Ticket Price : ₹${ele.price * ele.tickets}
+                        </p>
+                        <button
+                            class="btn"
+                            onclick="handleDecrement(${ele.id})">
+                            -
+                        </button>
+                        <span class="h3">
+                            ${ele.tickets}
+                        </span>
+                        <button
+                            class="btn"
+                            onclick="handleIncrement(${ele.id})">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    displayRow.innerHTML = htmlCode;
+}
+        displayData();
+        function handleIncrement(id) {
+            console.log(id);
+            let targetName = names.find(
+                (ele) => ele.id == id
+            );
+            console.log(targetName);
+            targetName.tickets++;
+            displayData();
+        }
+
+        function handleDecrement(id) {
+            console.log(id);
+            let targetValue = names.find(
+                (ele) => ele.id == id
+            );
+            if (targetValue.tickets > 0) {
+                targetValue.tickets--;
+            }
+            console.log(targetValue);
+            displayData();
+        }
+    </script>
+</body>
+
+</html>

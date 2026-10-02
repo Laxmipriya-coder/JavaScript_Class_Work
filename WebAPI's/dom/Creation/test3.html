@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Grocery List</h1>
+    <p>Bill of the grocery item paid by A</p>
+    <ul>
+        <li class="ingredients">Milk</li>
+        <li class="ingredients">Honey</li>
+        <li class="ingredients">Sugar</li>
+        <li id="food">Chicken</li>
+        <li id="homeitem">Harpic</li>
+    </ul>
+    <p>Thank You</p>
+
+    <!-- JavaScript Code -->
+    <script>
+        // getdocumentbyTagname gives the elements in collection format if it is one or more it alsways return the item in collection
+        let tagNameSelector = document.getElementsByTagName('h1');
+        console.log(tagNameSelector);
+
+        // getElementsByClassName
+        let classNameSelector = document.getElementsByClassName("ingredients");
+        console.log(classNameSelector);
+
+        // querySelector - It matches the record and return only one and 1st value
+        let anyTypeSelector = document.querySelector('li');
+        console.log(anyTypeSelector);
+
+        // querySelectorAll - It gives all the records that matches to the id,class,tagname,attribute
+        let anyTypeSelectorAll = document.querySelectorAll('li');
+        console.log(anyTypeSelectorAll);
+    </script>
+
+</body>
+
+</html>

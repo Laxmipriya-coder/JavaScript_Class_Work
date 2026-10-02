@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cart = [
+            {
+                name: "Laptop",
+                price:50000
+            },
+            {
+                name:"Mouse",
+                price:1000
+            },
+            {
+                name: "Keyboard",
+                price:2000
+            },
+            {
+                name:"Monitor",
+                price:15000
+            }
+        ];
+        
+        cart.forEach((values,index)=>{
+            if(values.price < 5000){
+                cart.splice(index,1)
+            }
+        });
+        console.log(cart);
+    </script>
+</body>
+</html>
